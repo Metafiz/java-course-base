@@ -1,3 +1,5 @@
+import classes.figures.*;
+
 public class TestClasses {
     public void testChangeVals(int a, double b, String s, Circle c) {
         System.out.println("Текущие значения: " + c.r);
@@ -18,17 +20,15 @@ public class TestClasses {
         System.out.println("Значения после вызова: " + cc.r);
 
         Rectangle rect;
-        rect = new Rectangle();
-        rect.x1 = 10;
-        rect.y1 = 20;
-        rect.x2 = 150;
-        rect.y2 = 180;
+        rect = new Rectangle(10, 20, 150, 180);
+//        rect.x1 = 10;
+//        rect.y1 = 20;
+//        rect.x2 = 150;
+//        rect.y2 = 180;
 
-        Rectangle r2 = new Rectangle();
-        r2.x1 = 20;
-        r2.y1 = 25;
-        r2.x2 = 111;
-        r2.y2 = 222;
+        Rectangle r2 = new Rectangle(20, 25, 111, 222);
+        r2.setX1(-11);
+        r2.setY1(30);
 
         System.out.println(r2.getSquare());
 
@@ -41,6 +41,17 @@ public class TestClasses {
         c.y = 2;
 
         System.out.println( c.getLength() );
+
+        // создаём массив объектов класса Rectangle из 3х элементов
+        Rectangle[] rects = new Rectangle[3];
+        rects[0] = new Rectangle(1, 1, 10, 20);
+        rects[1] = new Rectangle(11, 11, 110, 210);
+        rects[2] = new Rectangle(21, 21, 210, 220);
+
+        // в цикле проходим по массиву
+        for (Rectangle r : rects) {
+            r.printInfo();
+        }
 
     }
 }

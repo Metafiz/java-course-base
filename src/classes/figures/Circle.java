@@ -1,10 +1,12 @@
+package classes.figures;
+
 public class Circle {
     public int x, y, r=5;
 
-    public double square(){
+    public double square() {
         return  (Math.PI * r *r);
     }
-    public double getLength(){
+    public double getLength() {
         return  (2 * Math.PI * r);
     }
 }
