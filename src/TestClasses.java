@@ -14,5 +14,14 @@ public class TestClasses {
         r2.y2 = 222;
 
         r2 = rect;
+
+        Circle c;
+        c = new Circle();
+        c.r = 5;
+        c.x = 1;
+        c.y = 2;
+
+        System.out.println( c.getLength() );
+
     }
 }
