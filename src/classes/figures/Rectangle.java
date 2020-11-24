@@ -4,7 +4,7 @@ package classes.figures;
  * Прямоугольник.
  * Позволяет расчитать площадь и периметр
  * */
-public class Rectangle {
+public class Rectangle extends Figure {
     /** координаты левого верхнего угла */
     private int x1 = 0, y1 = 0;
     private int x2, y2;
@@ -12,12 +12,12 @@ public class Rectangle {
     /**
      * конструктор по умолчанию
      */
-    public Rectangle() {
-        this(0, 0);
+    public Rectangle(int id) {
+        this(id, 0, 0);
     }
 
-    public Rectangle(int x2, int y2) {
-        this(0, 0, x2, y2);
+    public Rectangle(int id, int x2, int y2) {
+        this(id, 0, 0, x2, y2);
     }
 
     /**
@@ -27,11 +27,14 @@ public class Rectangle {
      * @param x2
      * @param y2
      */
-    public Rectangle(int x1, int y1, int x2, int y2) {
+    public Rectangle(int id, int x1, int y1, int x2, int y2) {
+        super(id);
+
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
+        super.id = 77;
     }
 
     public int getX1() {
@@ -90,7 +93,7 @@ public class Rectangle {
      * Расчёт площади
      * @return площадь
      */
-    public int getSquare() {
+    public double getSquare() {
         return getHeight() * getWidth();
     }
 
