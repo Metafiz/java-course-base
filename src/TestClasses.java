@@ -1,5 +1,22 @@
 public class TestClasses {
+    public void testChangeVals(int a, double b, String s, Circle c) {
+        System.out.println("Текущие значения: " + c.r);
+        a = 777;
+        b = 12.34;
+        s = "new string";
+        c.r = 123;
+        System.out.println("значения после изменений: " + c.r);
+    }
     public static void main(String[] args) {
+        TestClasses tc = new TestClasses();
+        int a = 5;
+        double d = 3.14;
+        String s = "aaa";
+        Circle cc = new Circle();
+        cc.r = 10;
+        tc.testChangeVals(a, d, s, cc);
+        System.out.println("Значения после вызова: " + cc.r);
+
         Rectangle rect;
         rect = new Rectangle();
         rect.x1 = 10;
@@ -13,7 +30,9 @@ public class TestClasses {
         r2.x2 = 111;
         r2.y2 = 222;
 
-        r2 = rect;
+        System.out.println(r2.getSquare());
+
+        //r2 = rect;
 
         Circle c;
         c = new Circle();
