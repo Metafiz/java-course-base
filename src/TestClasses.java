@@ -44,8 +44,8 @@ public class TestClasses {
 
         // создаём массив объектов класса Rectangle из 3х элементов
         Rectangle[] rects = new Rectangle[3];
-        rects[0] = new Rectangle(1, 1, 10, 20);
-        rects[1] = new Rectangle(11, 11, 110, 210);
+        rects[0] = new Rectangle();
+        rects[1] = new Rectangle(110, 210);
         rects[2] = new Rectangle(21, 21, 210, 220);
 
         // в цикле проходим по массиву

@@ -13,6 +13,11 @@ public class Rectangle {
      * конструктор по умолчанию
      */
     public Rectangle() {
+        this(0, 0);
+    }
+
+    public Rectangle(int x2, int y2) {
+        this(0, 0, x2, y2);
     }
 
     /**
