@@ -54,15 +54,22 @@ public class TestClasses {
             r.printInfo();
         }
 
-        Figure fig; // = new Figure(1);
-        fig = new Rectangle(44, 100, 150);
-        System.out.println("figure square " + fig.getSquare());
-        System.out.println("rect square " + ((Rectangle)fig).getSquare());
+        Figure f1;
+        Figure f2 = new Circle(55, 10, 10, 8);
+        Figure f3 = new Figure(111);
+        f1 = new Rectangle(44, 100, 150);
 
-        if (fig instanceof Circle) {
-            ((Circle)fig).getR();
-        } else if (fig instanceof Rectangle) {
-            ((Rectangle)fig).getWidth();
+        f1.printInfo();
+        f2.printInfo();
+        f3.printInfo();
+
+        System.out.println("figure square " + f1.getSquare());
+        System.out.println("rect square " + ((Rectangle)f1).getSquare());
+
+        if (f1 instanceof Circle) {
+            ((Circle)f1).getR();
+        } else if (f1 instanceof Rectangle) {
+            ((Rectangle)f1).getWidth();
         }
     }
 }

@@ -34,7 +34,7 @@ public class Rectangle extends Figure {
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
-        super.id = 77;
+        //super.id = 77;
     }
 
     public int getX1() {
@@ -93,6 +93,7 @@ public class Rectangle extends Figure {
      * Расчёт площади
      * @return площадь
      */
+    @Override
     public double getSquare() {
         return getHeight() * getWidth();
     }
@@ -100,7 +101,9 @@ public class Rectangle extends Figure {
     /**
      * Вывод сведений
      */
+    @Override
     public void printInfo() {
+        super.printInfo();
         System.out.println("Прямоугольник: x1 = " + x1);
     }
 }

@@ -7,8 +7,22 @@ public class Circle extends Figure {
         super(id);
     }
 
+    public Circle(int id, int x, int y, int r) {
+        super(id);
+        this.x = x;
+        this.y = y;
+        this.r = r;
+    }
+
+    @Override
     public double getSquare() {
         return  (Math.PI * r *r);
+    }
+
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Круг: r = " + r);
     }
 
     public double getLength() {

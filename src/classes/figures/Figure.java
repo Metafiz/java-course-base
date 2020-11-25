@@ -15,4 +15,8 @@ public class Figure {
     public double getSquare() {
         return -1;
     }
+
+    public void printInfo() {
+        System.out.println("Фигура: id = " + id);
+    }
 }
