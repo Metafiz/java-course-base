@@ -2,7 +2,7 @@ package classes.figures;
 
 import java.awt.*;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements Drawable {
     private int x, y, r=5;
 
     public Circle(int id) {
@@ -10,13 +10,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void paint(Graphics graph) {
+    public void paint(Graphics graph, int thickness) {
         switch (this.color) {
             case BLACK -> graph.setColor(Color.BLACK);
             case BLUE -> graph.setColor(Color.BLUE);
             case RED -> graph.setColor(Color.RED);
             default -> graph.setColor(Color.BLACK);
         }
+        // задаём толщину
+        ((Graphics2D)graph).setStroke(new BasicStroke(thickness) );
         graph.drawOval(x - r, y - r, r, r);
     }
 

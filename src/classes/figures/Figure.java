@@ -11,8 +11,6 @@ public abstract class Figure {
         this.color = FigureColor.BLACK;
     }
 
-    public abstract void paint(Graphics graph);
-
     public abstract double getPerimeter();
 
     public abstract double getSquare();

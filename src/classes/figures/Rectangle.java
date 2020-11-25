@@ -6,7 +6,7 @@ import java.awt.*;
  * Прямоугольник.
  * Позволяет расчитать площадь и периметр
  * */
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements Drawable {
     /** координаты левого верхнего угла */
     private int x1 = 0, y1 = 0;
     private int x2, y2;
@@ -39,16 +39,7 @@ public class Rectangle extends Figure {
         //super.id = 77;
     }
 
-    @Override
-    public void paint(Graphics graph) {
-        switch (this.color) {
-            case BLACK -> graph.setColor(Color.BLACK);
-            case BLUE -> graph.setColor(Color.BLUE);
-            case RED -> graph.setColor(Color.RED);
-            default -> graph.setColor(Color.BLACK);
-        }
-        graph.drawRect(x1, y1, x2-x1, y2-y1);
-    }
+
 
     @Override
     public double getPerimeter() {
@@ -123,5 +114,18 @@ public class Rectangle extends Figure {
     public void printInfo() {
         super.printInfo();
         System.out.println("Прямоугольник: x1 = " + x1);
+    }
+
+    @Override
+    public void paint(Graphics graph, int thickness) {
+        switch (this.color) {
+            case BLACK -> graph.setColor(Color.BLACK);
+            case BLUE -> graph.setColor(Color.BLUE);
+            case RED -> graph.setColor(Color.RED);
+            default -> graph.setColor(Color.BLACK);
+        }
+        // задаём толщину
+        ((Graphics2D)graph).setStroke(new BasicStroke(thickness) );
+        graph.drawRect(x1, y1, x2-x1, y2-y1);
     }
 }
