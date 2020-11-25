@@ -1,12 +1,41 @@
 package classes.figures;
 
-public class Circle {
-    public int x, y, r=5;
+public class Circle extends Figure {
+    private int x, y, r=5;
 
-    public double square() {
+    public Circle(int id) {
+        super(id);
+    }
+
+    public double getSquare() {
         return  (Math.PI * r *r);
     }
+
     public double getLength() {
         return  (2 * Math.PI * r);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getR() {
+        return r;
+    }
+
+    public void setR(int r) {
+        this.r = r;
     }
 }
