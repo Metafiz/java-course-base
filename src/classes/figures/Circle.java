@@ -7,6 +7,16 @@ public class Circle extends Figure {
         super(id);
     }
 
+    @Override
+    public void paint() {
+
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 0;
+    }
+
     public Circle(int id, int x, int y, int r) {
         super(id);
         this.x = x;

@@ -1,6 +1,6 @@
 package classes.figures;
 
-public class Figure {
+public abstract class Figure {
     protected int id;
     protected int color;
 
@@ -8,13 +8,11 @@ public class Figure {
         this.id = id;
     }
 
-    public double getPerimeter() {
-        return -1;
-    }
+    public abstract void paint();
 
-    public double getSquare() {
-        return -1;
-    }
+    public abstract double getPerimeter();
+
+    public abstract double getSquare();
 
     public void printInfo() {
         System.out.println("Фигура: id = " + id);

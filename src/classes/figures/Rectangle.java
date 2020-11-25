@@ -37,6 +37,16 @@ public class Rectangle extends Figure {
         //super.id = 77;
     }
 
+    @Override
+    public void paint() {
+
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 0;
+    }
+
     public int getX1() {
         return x1;
     }

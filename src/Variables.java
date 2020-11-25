@@ -6,6 +6,8 @@ public class Variables {
 
         delta = 1.25;
         float value = 7.54f;
+        delta = a;
+        b = (int)delta;
 
         double aa = 7.54;
         float value2 = (float) (aa + 2.2);

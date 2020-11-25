@@ -56,12 +56,12 @@ public class TestClasses {
 
         Figure f1;
         Figure f2 = new Circle(55, 10, 10, 8);
-        Figure f3 = new Figure(111);
+        //Figure f3 = new Figure(111);
         f1 = new Rectangle(44, 100, 150);
 
         f1.printInfo();
         f2.printInfo();
-        f3.printInfo();
+        //f3.printInfo();
 
         System.out.println("figure square " + f1.getSquare());
         System.out.println("rect square " + ((Rectangle)f1).getSquare());
