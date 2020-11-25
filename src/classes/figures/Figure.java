@@ -1,5 +1,7 @@
 package classes.figures;
 
+import java.awt.*;
+
 public abstract class Figure {
     protected int id;
     protected int color;
@@ -8,7 +10,7 @@ public abstract class Figure {
         this.id = id;
     }
 
-    public abstract void paint();
+    public abstract void paint(Graphics graph);
 
     public abstract double getPerimeter();
 

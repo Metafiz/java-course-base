@@ -1,5 +1,7 @@
 package classes.figures;
 
+import java.awt.*;
+
 public class Circle extends Figure {
     private int x, y, r=5;
 
@@ -8,8 +10,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void paint() {
-
+    public void paint(Graphics graph) {
+        graph.drawOval(x - r, y - r, r, r);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package classes.figures;
 
+import java.awt.*;
+
 /**
  * Прямоугольник.
  * Позволяет расчитать площадь и периметр
@@ -38,8 +40,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void paint() {
-
+    public void paint(Graphics graph) {
+        graph.drawRect(x1, y1, x2-x1, y2-y1);
     }
 
     @Override
