@@ -4,10 +4,11 @@ import java.awt.*;
 
 public abstract class Figure {
     protected int id;
-    protected int color;
+    protected FigureColor color;
 
     public Figure(int id) {
         this.id = id;
+        this.color = FigureColor.BLACK;
     }
 
     public abstract void paint(Graphics graph);
@@ -18,5 +19,13 @@ public abstract class Figure {
 
     public void printInfo() {
         System.out.println("Фигура: id = " + id);
+    }
+
+    public FigureColor getColor() {
+        return color;
+    }
+
+    public void setColor(FigureColor color) {
+        this.color = color;
     }
 }

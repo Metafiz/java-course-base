@@ -1,6 +1,7 @@
 package ui;
 
 import classes.figures.Circle;
+import classes.figures.FigureColor;
 import classes.figures.Rectangle;
 
 import javax.swing.*;
@@ -25,6 +26,7 @@ public class MainForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Circle c = new Circle(1, 300, 200, 80);
+                c.setColor(FigureColor.RED);
                 c.paint(paintPanel.getGraphics());
             }
         });
@@ -39,6 +41,7 @@ public class MainForm extends JFrame {
 
     private void drawRect() {
         Rectangle rect = new Rectangle(1, 50, 50, 250, 200);
+        rect.setColor(FigureColor.BLUE);
         rect.paint(paintPanel.getGraphics());
     }
 

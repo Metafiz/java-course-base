@@ -41,6 +41,12 @@ public class Rectangle extends Figure {
 
     @Override
     public void paint(Graphics graph) {
+        switch (this.color) {
+            case BLACK -> graph.setColor(Color.BLACK);
+            case BLUE -> graph.setColor(Color.BLUE);
+            case RED -> graph.setColor(Color.RED);
+            default -> graph.setColor(Color.BLACK);
+        }
         graph.drawRect(x1, y1, x2-x1, y2-y1);
     }
 
