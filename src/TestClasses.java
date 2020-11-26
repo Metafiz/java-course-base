@@ -42,6 +42,7 @@ public class TestClasses {
 
         Circle c;
         c = new Circle(1);
+        c.setR(-5);
 //        c.r = 5;
 //        c.x = 1;
 //        c.y = 2;

@@ -70,6 +70,7 @@ public class Circle extends Figure implements Drawable {
     }
 
     public void setR(int r) {
+        assert r > 0 : "Радиус не может быть отрицательным!";
         this.r = r;
     }
 }
