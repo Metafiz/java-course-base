@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class TestStrings {
     public static void stringReplace( String text ) {
         text = text.replace('j','i');
@@ -13,6 +16,15 @@ public class TestStrings {
         bufferReplace( sb );
         System.out.println( textString );
         System.out.println(sb.toString());
+
+        String template = "^[A-Z]\\w*",
+                str = "V%";
+        Pattern p = Pattern.compile( template );
+        Matcher m = p.matcher( str );
+        boolean b = m.matches();
+        int pos = m.start();
+        System.out.printf("Строка %s соответствует шаблону %s? %b, позиция = %d", str, template, b, pos);
+
     }
 
 }
