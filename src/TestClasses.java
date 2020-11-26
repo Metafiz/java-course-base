@@ -28,8 +28,13 @@ public class TestClasses {
 //        rect.y2 = 180;
 
         Rectangle r2 = new Rectangle(12, 20, 25, 111, 222);
-        r2.setX1(-11);
-        r2.setY1(30);
+        r2.setX1(11);
+        try {
+            r2.setY1(-30);
+        } catch (IncorrectCoordsException e) {
+            System.err.printf("Ошибка при попытке установить координату: %s, знач-е коорд = %d \n",
+                    e.getMessage(), e.getCoord());
+        }
 
         System.out.println(r2.getSquare());
 

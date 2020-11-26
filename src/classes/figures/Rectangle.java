@@ -60,9 +60,11 @@ public class Rectangle extends Figure implements Drawable {
         return y1;
     }
 
-    public void setY1(int y1) {
+    public void setY1(int y1) throws IncorrectCoordsException {
         if (y1 >= 0 && y1 <= 480 ) {
             this.y1 = y1;
+        } else {
+            throw new IncorrectCoordsException("Некорректное значение координаты y1", y1);
         }
     }
 
