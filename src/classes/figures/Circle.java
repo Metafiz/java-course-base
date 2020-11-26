@@ -73,4 +73,5 @@ public class Circle extends Figure implements Drawable {
         assert r > 0 : "Радиус не может быть отрицательным!";
         this.r = r;
     }
+
 }
