@@ -2,7 +2,7 @@ package classes.users;
 
 import java.util.Date;
 
-public class Customer implements Comparable {
+public class Customer implements Comparable<Customer> {
     private int id;
     private String name;
     private Date birthDate;
@@ -69,9 +69,9 @@ public class Customer implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        Customer c = (Customer)o;
-        return name.compareTo(c.name);
+    public int compareTo(Customer o) {
+        //Customer c = (Customer)o;
+        return name.compareTo(o.name);
     }
 
     @Override
